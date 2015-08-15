@@ -1,7 +1,8 @@
+var initialState = 0;
+
 Meteor.methods({
   counter: function (state, action) {
-    state = state === null ? action.initialValue : state;
-    // es6 default params will rescue!
+    state = state === null ? initialState : state;
 
     switch (action.type) {
       case INCREMENT_COUNTER:

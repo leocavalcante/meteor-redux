@@ -1,9 +1,5 @@
-initCounter = function (initialValue) {
-  return {
-    type: 'INIT',
-    initialValue: initialValue
-  }
-}
+INCREMENT_COUNTER = 'INCREMENT_COUNTER';
+DECREMENT_COUNTER = 'DECREMENT_COUNTER';
 
 incrementCounter = function () {
   return {
