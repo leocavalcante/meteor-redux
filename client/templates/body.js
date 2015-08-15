@@ -1,42 +1,20 @@
 Template.body.onCreated(function () {
-  this.store = new ReactiveDict('bodyStore');
-
-  Meteor.call(
-    'counter',
-    this.store.get('counter'),
-    {type: 'INIT'},
-    function (error, state) {
-      this.store.set('counter', state);
-    }.bind(this)
-  );
+  this.state = new ReactiveDict('bodyState');
+  counterStore.dispatch(initCounter(0), this.state);
 })
 
 Template.body.helpers({
   counter: function () {
-    return Template.instance().store.get('counter');
+    return Template.instance().state.get('counter');
   }
 });
 
 Template.body.events({
   'click .increment.button': function (event, template) {
-    Meteor.call(
-      'counter',
-      template.store.get('counter'),
-      {type: INCREMENT_COUNTER},
-      function (error, state) {
-        template.store.set('counter', state);
-      }
-    );
+    counterStore.dispatch(incrementCounter(), template.state);
   },
 
   'click .decrement.button': function (event, template) {
-    Meteor.call(
-      'counter',
-      template.store.get('counter'),
-      {type: DECREMENT_COUNTER},
-      function (error, state) {
-        template.store.set('counter', state);
-      }
-    );
+    counterStore.dispatch(decrementCounter(), template.state);
   }
 });

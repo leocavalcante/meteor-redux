@@ -1,6 +1,6 @@
 Meteor.methods({
   counter: function (state, action) {
-    state = state === null ? 0 : state;
+    state = state === null ? action.initialValue : state;
     // es6 default params will rescue!
 
     switch (action.type) {
