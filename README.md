@@ -23,3 +23,7 @@ Here we delegate dispatch behavior to [Meteor.methods()](http://docs.meteor.com/
 > Mutations are written as [pure functions](https://en.wikipedia.org/wiki/Pure_function).
 
 Here there is a gap, a huge one. Reducers aren't simple pure functions, since they are Meteor.methods they can handle persistent data. This persisted (or not) state is returned and passed to equivalent ReactiveDict storage key that being a reactive source, Blaze templates as reactive computations can listen the new state by the helpers and update the UI.
+
+[@see reducers/counter.js](reducers/counter.js)
+
+Any thoughts?
