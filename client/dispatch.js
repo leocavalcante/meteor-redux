@@ -1,5 +1,5 @@
 /**
- * magic
+ * Magic?
  */
 dispatch = function (action) {
   reducers.forEach(function (reducer) {
