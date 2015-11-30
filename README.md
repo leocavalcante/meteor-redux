@@ -27,6 +27,6 @@ Here there is a gap, a huge one. Reducers aren't simple pure functions, since th
 [@see reducers/counter.js](reducers/counter.js)
 
 ### Why not using Redux itself?
-If you want to, please take a look at [this specific branch of this repo](https://github.com/AdamBrodzinski/meteor-flux-leaderboard/tree/redux), but the ideia here is to use Redux ideais/principles not it's library.
+If you want to, please take a look at [this specific branch of the repo](https://github.com/AdamBrodzinski/meteor-flux-leaderboard/tree/redux), but the idea here is to use Redux ideas/principles not its library.
 
 Any thoughts?
