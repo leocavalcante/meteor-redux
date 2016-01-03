@@ -1,15 +1,12 @@
+const { increment, decrement } = counterActions;
+
 Template.body.helpers({
-  counter: function () {
+  counter() {
     return store.get('counter');
   }
 });
 
 Template.body.events({
-  'click .increment.button': function (event) {
-    dispatch(incrementCounter());
-  },
-
-  'click .decrement.button': function (event) {
-    dispatch(decrementCounter());
-  }
+  'click .increment.button': event => dispatch(increment()),
+  'click .decrement.button': event => dispatch(decrement())
 });

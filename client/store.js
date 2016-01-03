@@ -5,4 +5,3 @@
  */
 store = new ReactiveDict('store');
 reducers = ['counter'];
-dispatch({type: '@@redux/INIT'}); // https://github.com/rackt/redux/blob/master/src/createStore.js#L147
