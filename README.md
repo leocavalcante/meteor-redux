@@ -27,7 +27,7 @@ Here we delegate dispatch behavior to [Meteor.methods()](http://docs.meteor.com/
 [@see reducers/counter.js](lib/reducers/counter.js)
 
 ### Why not using Redux itself?
-The ideia here is to use Redux ideais/principles not it's library. It's for matching Redux methodology within Meteor helping to avoid Session abuse, manage application state with a single source of truth and data flow.
+The idea is to use Redux principles not it's library. It's for matching Redux methodology within Meteor helping to avoid Session abuse, manage application state with a single source of truth and data flow.
 
 *Please, note that Redux itself enables awesome features like time traveling, but it is not the idea, it's a consequence.*
 
